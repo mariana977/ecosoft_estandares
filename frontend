@@ -1,0 +1,35 @@
+Estructura de carpetas
+
+Usar una estructura clara (components/, pages/, hooks/, services/, assets/).
+
+Cada componente en su propio archivo y carpeta si es complejo.
+
+Evitar archivos con muchas líneas de código.
+
+Estilo de código
+
+Usar ESLint + Prettier para formateo automático.
+
+Nombres en camelCase para variables y funciones.
+
+Componentes en PascalCase (LoginForm.jsx).
+
+Archivos de estilos (CSS/SCSS) con el mismo nombre del componente.
+
+Componentes
+
+Usar funcionales + hooks, no clases.
+
+Cada componente debe hacer una sola cosa.
+
+Props tipadas con PropTypes o TypeScript.
+
+Buenas prácticas
+
+No lógica de negocio en los componentes 
+
+Reutilizar componentes siempre que sea posible.
+
+Usar variables de entorno (.env) para configuraciones (ej: URL API).
+
+Evitar console.log en producción → usar un sistema de logs o debugger.
