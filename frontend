@@ -1,35 +1,41 @@
-Estructura de carpetas
+Frontend (React + Tailwind)
 
-Usar una estructura clara (components/, pages/, hooks/, services/, assets/).
+Estructura
 
-Cada componente en su propio archivo y carpeta si es complejo.
+src/components/ → componentes reutilizables, en PascalCase (Header.jsx, LoginForm.jsx).
 
-Evitar archivos con muchas líneas de código.
+src/pages/ → vistas principales (Home.jsx, Login.jsx, Register.jsx).
 
-Estilo de código
+src/assets/ → imágenes, íconos, fuentes.
 
-Usar ESLint + Prettier para formateo automático.
+Evitar lógica de negocio en componentes → mover a services/ o hooks personalizados.
 
-Nombres en camelCase para variables y funciones.
+Código
 
-Componentes en PascalCase (LoginForm.jsx).
+Usar funciones y hooks, no clases.
 
-Archivos de estilos (CSS/SCSS) con el mismo nombre del componente.
+Variables y funciones → camelCase.
 
-Componentes
+Componentes → PascalCase.
 
-Usar funcionales + hooks, no clases.
+Máx. 300 líneas por archivo.
 
-Cada componente debe hacer una sola cosa.
+Usar ESLint + Prettier para consistencia.
 
-Props tipadas con PropTypes o TypeScript.
+Estilos (Tailwind)
+
+Usar clases utilitarias de Tailwind, evitar CSS inline.
+
+Crear className legibles (evitar cadenas de 20 clases).
+
+Extraer estilos repetidos en @apply dentro de un .css o .scss.
 
 Buenas prácticas
 
-No lógica de negocio en los componentes 
+Props tipadas con PropTypes (o TypeScript en futuro).
 
-Reutilizar componentes siempre que sea posible.
+Manejo de estado global → usar Context API o librería ligera.
 
-Usar variables de entorno (.env) para configuraciones (ej: URL API).
+No console.log en producción → usar un logger o condicionar al entorno.
 
-Evitar console.log en producción → usar un sistema de logs o debugger.
+Variables de entorno (.env) para URLs de API, no hardcodear.
