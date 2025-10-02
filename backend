@@ -1,0 +1,48 @@
+Estructura de archivos
+
+Mantener todas las rutas en routes hasta el momento
+
+db.js solo debe encargarse de la conexión.
+
+index.js solo arranca el servidor y monta las rutas.
+
+No mezclar lógica de negocio con la definición del servidor.
+
+Rutas
+
+Cada archivo en routes/ debe manejar una entidad (users.js, auth.js).
+
+Exportar un router limpio.
+
+Usar nombres REST:
+
+GET /users → lista usuarios
+
+POST /users → crea usuario
+
+PUT /users/:id → actualiza usuario
+
+DELETE /users/:id → elimina usuario
+
+Código
+
+Variables y funciones en camelCase.
+
+Archivos en lowercase (auth.js, users.js).
+
+Usar async/await con try/catch siempre que haya consultas a BD.
+
+No escribir SQL/queries directo en las rutas → crear helpers en un archivo aparte (db.js o queries.js).
+
+Buenas prácticas
+
+Manejar errores con res.status(...).json(...) en cada ruta.
+
+Nunca exponer datos sensibles → usar .env.
+
+Evitar console.log en producción.
+
+Respuestas JSON consistentes:
+
+{ "success": true, "data": ... }
+{ "success": false, "error": ... }
